@@ -1,0 +1,36 @@
+# User specific & automatically generated files #
+
+#################################################
+
+/flash
+
+/images
+
+/Scripts
+
+/tresources/resources
+
+/tresources/images
+
+/tresources/vd
+
+.htaccess
+
+.htaccess.bak
+
+demo.html
+
+*.pdf
+
+*.swf
+
+
+# OS generated files #
+
+######################
+
+.DS_Store
+
+.DS_Store?
+
+._*
