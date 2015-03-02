@@ -1,9 +1,18 @@
 <?php
-session_start();
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $_SESSION['user_role'] = 'admin';
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "admin_site_cake";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -165,6 +174,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div id="faq_content">
                                     <h1>General IRBNet FAQs</h1>
                                     <p>&nbsp;</p>
+
+                                    <?php
+                                        $sql = "SELECT id, name FROM faq_sections";
+                                        $result = $conn->query($sql);
+
+                                        if ($result->num_rows > 0) {
+                                            while($row = $result->fetch_assoc()) {
+                                                echo "<h2>".$row["name"]."</h2>";
+                                                echo "<ul>";
+                                                $sectionId = $row['id'];
+                                                $sql = "SELECT question, reference_name FROM faq_questions WHERE faq_section_id = $sectionId ORDER BY question";
+                                                $questionResult = $conn->query($sql);
+                                                if ($questionResult->num_rows > 0) {
+                                                    while($row = $questionResult->fetch_assoc()) {
+                                                        $reference_name = '#' . $row['reference_name'];
+                                                        echo "<li><a href='$reference_name'>" . $row['question'] . "</a></li>";
+                                                    }
+                                                } else {
+                                                    echo "<li>No Questions</li>";
+                                                }
+                                                echo "</ul>";
+                                            }
+                                        } else {
+                                            echo "<h2>No Sections</h2>";
+                                        }
+                                    ?>
+
+
+                                    <!-- HARD CODED CONTENT BELOW -->
+
+                                    <!--
 									<h2>Account Access</h2>
 										<ul>
 											<li><a href="#accounts_forgot_password">My researcher has forgotten his or her password, and the email address registered to his or her account is no longer accessible. How can he retrieve access to his or her account? Should he or she create a new account?</a></li>
@@ -222,8 +262,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 											<li><a href="#tc_rescoord_upload">Can research coordinators upload training on behalf of other researchers?</a></li>
 											<li><a href="#tc_oops_cred">My researcher uploaded a credential, and then updated that credential with an entirely different one, causing a stack of papers icon to appear next to it. These are two different credentials that have the same expiration date, but the system won't let me overlap expiration dates. How can I add the expiration date for the second credential?</a></li>
 										</ul>
+                                    -->
 									
 							<!--FAQ BODY -->
+                                    <?php
+                                        $sql = "SELECT id, name FROM faq_sections";
+                                        $result = $conn->query($sql);
+
+                                        if ($result->num_rows > 0) {
+                                            while($row = $result->fetch_assoc()) {
+                                                echo "<h2 class='faq_section_header'>".$row["name"]."<a class='faq_top_link' href='#'>top</a></h2>";
+                                                $sectionId = $row['id'];
+                                                $sql = "SELECT question, answer, reference_name FROM faq_questions WHERE faq_section_id = $sectionId ORDER BY question";
+                                                $questionResult = $conn->query($sql);
+                                                if ($questionResult->num_rows > 0) {
+                                                    while($row = $questionResult->fetch_assoc()) {
+                                                        $reference_name = $row['reference_name'];
+                                                        echo "<h3><a name='$reference_name'></a>" . $row['question'] . "</h3>";
+                                                        echo "<p>" . $row['answer'] . "</p>";
+                                                    }
+                                                } else {
+                                                    echo "<h3>No Questions</h3>";
+                                                }
+                                            }
+                                        } else {
+                                            echo "<h2 class='faq_section_header'>No Sections</h2>";
+                                        }
+                                        $conn->close();
+                                    ?>
+
+                                    <!-- HARD CODED CONTENT BELOW -->
+
+                                    <!--
                                     <h2 class="faq_section_header">Account Access<a class="faq_top_link" href="#">top</a></h2>
 										<h3><a name="accounts_forgot_password"></a>My researcher has forgotten his or her password, and the email address registered to his or her account is no longer accessible. How can he retrieve access to his or her account? Should he or she create a new account?</h3>
 											<p>Please send <a href="mailto:support@irbnet.org" target="_blank">support@irbnet.org</a> the name of the user and what email address he would like to use. From there, a Support Team Member will change the email address of the user and trigger a password reminder email to him or her. Your researchers should never create duplicate accounts.</p>
@@ -312,6 +382,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 										<h3><a name="tc_oops_cred"></a>My researcher uploaded a credential, and then updated that credential with an entirely different one, causing a stack of papers icon to appear next to it. These are two different credentials that have the same expiration date, but the system won't let me overlap expiration dates. How can I add the expiration date for the second credential?</h3>
 											<p>First, we recommend removing the second version of the credential from your workspace using the red X icon. Your researcher will then need to upload the second credential as an entirely new credential, instead of updating a previous credential. He or she can do this by clicking on Add a New Training &amp; Credentials Record, and then selecting None of these and clicking continue. From there, they can upload the new record and submit it. Once they have submitted it, you can add the expiration date accordingly.</p>
 									</div>
+                                    -->
 
 											
 											
@@ -322,7 +393,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 											<p>ANSWER</p>
 									
 									-->
-											
+									<p>&nbsp;</p>		
+                                    <p>&nbsp;</p>       
+                                    <p>&nbsp;</p>
+                                </div>
                             </div>
 
                         </div>
@@ -331,7 +405,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <!-- Footer -->
                         <div id="footer">
-                            <p>Copyright &copy; 2002-2014 Research Dataware, LLC.&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
+                            <p>Copyright &copy; 2002-2015 Research Dataware, LLC.&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
                         </div>
                     <!-- Close Main Content Area -->
                     </div>

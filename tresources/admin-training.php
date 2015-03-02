@@ -195,7 +195,7 @@
 
                         <!-- Footer -->
                         <div id="footer">
-                            <p>Copyright &copy; 2002-2014 Research Dataware, LLC.&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
+                            <p>Copyright &copy; 2002-2015 Research Dataware, LLC.&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
                         </div>
                     <!-- Close Main Content Area -->
                     </div>
