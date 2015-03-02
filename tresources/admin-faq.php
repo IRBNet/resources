@@ -149,16 +149,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			
                         <div id="faq_section">
 						
-							<!-- Replaced right Navlist with the Navbar. Keeping as placeholder for "Submit Question"
                             <div id="faq_navigation">
                                 <h2>FAQ Section</h2>
 									<ul>
 										<li><a id="faq_content_link" href="#" class="active_faq_menu_item">General FAQs</a></li>
-										<li><a id="general_resources_link" href="http://localhost/irbnetresources/tresources/admin-training.php">Other Resources</a></li>
+										<li><a id="general_resources_link" href="admin-training.php">Other Resources</a></li>
 									</ul>
                             </div>
 							
-							-->
 
                             <div id="faq_main_body">
 							

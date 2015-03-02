@@ -1,9 +1,3 @@
-<?php
-session_start();
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $_SESSION['user_role'] = 'admin';
-}
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -134,73 +128,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </p>
                     </div>
 
-                        <div id="leftcol">
-                            <div class="left_content">
-                                <table width="596" border="0">
-                                    <tr>
-                                        <td width="596" height="85" valign="top">
-                                            <h2><u>IRBNet Energizers</u>: PDF documents showing for <em>general use</em> of IRBNet</h2>
-                                            <ul>
-                                                <li><a href="resources/IRBNet_Training_Energizer-Submission_Coordinator.pdf">Basics: Understanding submission workflow</a></li>
-                                                <li ><a href="resources/IRBNet_Training_Energizer-Submission_Coordinator_Other_Tools.pdf">Other Tools: Using the Agenda/Minutes Builders</a></li>
-                                                <li><a href="resources/IRBNet_Training_Energizer-Tracking Training_and_Credentials.pdf">Track Training: Managing institutional Training &amp; Credentials records</a></li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td height="100" width="596" valign="top">
-                                            <h2><u>IRBNet Notes</u>: Supplemental instruction for <em>specific actions</em> in IRBNet </h2>
-                                            <ul>
-                                                <li><a href="resources/IRBNetNotes-Pre-ReviewChecklist.pdf">Pre-Review Checklist</a></li>
-                                                <li><a href="resources/IRBNetNotes-ProjectClosureManagement.pdf">Project Closure Managements</a></li>
-                                                <li><a href="resources/IRBNetNotes-Messages_&_Alerts-Coordinator.pdf">Messages &amp; Alerts</a></li>
-                                                <li><a href="resources/IRBNetNotes-PastingintoRTE.pdf">Pasting into Rich Text Editors</a></li>
-                                                <li><a href="resources/IRBNetNotes-InsertingTables.pdf">Inserting Tables into Letters/Minutes</a></li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <h2>IRBNet Administrator / Coordinator Forum </h2>
-                                <p>The <a href="http://www.irbnetresources.org/forum">IRBNet Forum</a> is available to IRBNet administrators and coordinators to share best practices, tips and frequently asked questions.  We encourage IRBNet committee administrators and coordinators to subscribe. Access requires IRBNet approval.</p>
-                                <p>&nbsp;</p>
-
-
-                                <p>&nbsp;</p>
+                    <div id="main_content">
+                        <div id="titlecol">
+                            <div class="title_content">
+                                <h1>Administrator Resources</h1>
+                                <p>All materials property of IRBNet. No materials may be disclosed beyond Enrolled Member Institutions without written permission of IRBNet.</p>
                             </div>
                         </div>
 
-                        <!-- Right Column -->
-                        <div id="rightcol">
-                            <div class="right_bluemodulewrap">
-                                <div class="right_yellowmodule_bluebg">
-                                    <div class="right_yellowmodule">
-                                        <h1>Energizer Breakdown...</h1>
-                                        <h2><a href="resources/IRBNet_Training_Energizer-Submission_Coordinator.pdf">Basics</a></h2>
-                                        <p>Pre-review</p>
-                                        <p>Preparing for your next meeting</p>
-                                        <p>Sharing with your committee  </p>
+                        <div id="faq_section">
+                            <div id="faq_navigation">
+                                <h2>FAQ Section</h2>
+                                    <ul>
+                                        <li><a id="faq_content_link" href="admin-faq.php">General FAQs</a></li>
+                                        <li><a id="general_resources_link" href="#" class="active_faq_menu_item">Other Resources</a></li>
+                                    </ul>
+                            </div>
 
-                                        <h2><a href="resources/IRBNet_Training_Energizer-Submission_Coordinator_Other_Tools.pdf">Other Tools</a></h2>
-                                        <p>Agenda Builder</p>
-                                        <p>Minutes Builder</p>
-                                        <p>Library Manager</p>
+                            <div id="faq_main_body">
 
-                                        <h2><a href="resources/IRBNet_Training_Energizer-Tracking Training_and_Credentials.pdf">Track Training</a></h2>
-                                        <p>Review and accept T&amp;C docs</p>
-                                        <p>Managing T&amp;C for entire research community</p>
-                                        <p id="right_resources_access_line">&nbsp;</p>
+                                <div id="leftcol">
+                                    <div class="left_content">
+                                        <table width="596" border="0">
+                                            <tr>
+                                                <td width="596" height="85" valign="top">
+                                                    <h2><u>IRBNet Energizers</u>: PDF documents showing for <em>general use</em> of IRBNet</h2>
+                                                    <ul>
+                                                        <li><a href="resources/IRBNet_Training_Energizer-Submission_Coordinator.pdf">Basics: Understanding submission workflow</a></li>
+                                                        <li ><a href="resources/IRBNet_Training_Energizer-Submission_Coordinator_Other_Tools.pdf">Other Tools: Using the Agenda/Minutes Builders</a></li>
+                                                        <li><a href="resources/IRBNet_Training_Energizer-Tracking Training_and_Credentials.pdf">Track Training: Managing institutional Training &amp; Credentials records</a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="100" width="596" valign="top">
+                                                    <h2><u>IRBNet Notes</u>: Supplemental instruction for <em>specific actions</em> in IRBNet </h2>
+                                                    <ul>
+                                                        <li><a href="resources/IRBNetNotes-Pre-ReviewChecklist.pdf">Pre-Review Checklist</a></li>
+                                                        <li><a href="resources/IRBNetNotes-ProjectClosureManagement.pdf">Project Closure Managements</a></li>
+                                                        <li><a href="resources/IRBNetNotes-Messages_&_Alerts-Coordinator.pdf">Messages &amp; Alerts</a></li>
+                                                        <li><a href="resources/IRBNetNotes-PastingintoRTE.pdf">Pasting into Rich Text Editors</a></li>
+                                                        <li><a href="resources/IRBNetNotes-InsertingTables.pdf">Inserting Tables into Letters/Minutes</a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <h2>IRBNet Administrator / Coordinator Forum </h2>
+                                        <p>The <a href="http://www.irbnetresources.org/forum">IRBNet Forum</a> is available to IRBNet administrators and coordinators to share best practices, tips and frequently asked questions.  We encourage IRBNet committee administrators and coordinators to subscribe. Access requires IRBNet approval.</p>
+
+                                        <br />
+
+                                        <h2>Other Resources</h2>
+                                        <p><a href="training.html">Researcher Resources</a></p>
+                                        <p><a href="member-training.html">Committee Member Resources</a></p>
+
+
+                                        <p>&nbsp;</p>
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class ="right_resources_access">
-                        	   <h1>Other Resources Pages ...</h1>
-                                <h2><a href="training.html">Researcher Resources</a></h2>
-                                <h2><a href="member-training.html">Committee Member Resources</a></h2>
-                                <p id="right_resources_access_line">&nbsp;</p>
-                            </div>
                         </div>
+
 
                         <!-- Footer -->
                         <div id="footer">
