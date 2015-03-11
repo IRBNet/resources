@@ -139,7 +139,7 @@ require('database.php');
                         <div id="titlecol">
                             <div class="title_content">
                                 <h1>Administrator FAQs</h1>
-                                <p>All materials property of IRBNet. No materials may be disclosed beyond Enrolled Member Institutions without written permission of IRBNet.</p>
+                                <p>&nbsp;</p>
                             </div>
                         </div>
 
@@ -150,10 +150,10 @@ require('database.php');
                         <div id="faq_section">
 						
                             <div id="faq_navigation">
-                                <h2>FAQ Section</h2>
+                                <h2>Resources</h2>
 									<ul>
-										<li><a id="faq_content_link" href="#" class="active_faq_menu_item">General FAQs</a></li>
-										<li><a id="general_resources_link" href="admin-training.php">Other Resources</a></li>
+                                        <li><a id="general_resources_link" href="admin-training.php">General Resources</a></li>
+										<li><a id="faq_content_link" href="#" class="active_faq_menu_item">FAQs</a></li>
 									</ul>
                             </div>
 							
@@ -163,8 +163,6 @@ require('database.php');
 							<!--TABLE OF CONTENTS -->
 							
                                 <div id="faq_content">
-                                    <h1>General IRBNet FAQs</h1>
-                                    <p>&nbsp;</p>
 
                             <!--FAQ SECTIONS AND QUESTIONS -->
                                     <?php
