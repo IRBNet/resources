@@ -166,7 +166,7 @@ require('database.php');
 
                             <!--FAQ SECTIONS AND QUESTIONS -->
                                     <?php
-                                        $sql = "SELECT id, name FROM faq_sections";
+                                        $sql = "SELECT id, name FROM faq_sections ORDER BY name";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {
