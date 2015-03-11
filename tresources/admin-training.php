@@ -124,7 +124,7 @@
                     <!-- Navigation -->
                     <div id="navigation">
                         <p>
-                            <a href="../index.html"><img src="images/nav/home.gif" alt="Home" width="45" height="29" border="0" /></a><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" /><!-- Close Nav --><img src="images/resources-on.gif" width="74" height="29" /><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" /><a href="../tresources/admin-faq.php"><img src="images/nav/faq.gif" width="36" height="29" border="0" longdesc="http://www.irbnetresources.org/tresources/admin-faq.php" /></a>
+                            <a href="../index.html"><img src="images/nav/home.gif" alt="Home" width="45" height="29" border="0" /></a><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" /><!-- Close Nav --><img src="images/resources-on.gif" width="74" height="29" /><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" />
                         </p>
                     </div>
 

@@ -130,7 +130,7 @@ require('database.php');
                     <!-- Navigation -->
                     <div id="navigation">
                         <p>
-                            <a href="../index.html"><img src="images/nav/home.gif" alt="Home" width="45" height="29" border="0" /></a><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" /><!-- Close Nav --><a href="../tresources/admin-training.php"><img src="images/resources.gif" width="74" height="29" /></a><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" /><img src="images/nav/faq-on.gif" width="36" height="29" border="0" longdesc="http://www.irbnetresources.org/tresources/admin-faq.php" />
+                            <a href="../index.html"><img src="images/nav/home.gif" alt="Home" width="45" height="29" border="0" /></a><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" /><!-- Close Nav --><a href="../tresources/admin-training.php"><img src="images/resources-on.gif" width="74" height="29" /></a><img src="images/nav/nav-div.gif" alt="Home" width="1" height="29" border="0" class="navdiv" />
                         </p>
                     </div>
 

@@ -29,6 +29,12 @@ class Parsedown
         # standardize line breaks
         $text = str_replace(array("\r\n", "\r"), "\n", $text);
 
+        # replay curly single quotes with standard ones
+        $text = str_replace(array("’", "‘"), "'", $text);
+
+        # replay curly double quotes with standard ones
+        $text = str_replace(array("“", "”"), "\"", $text);
+
         # remove surrounding line breaks
         $text = trim($text, "\n");
 
