@@ -174,11 +174,6 @@
                                             </tr>
                                         </table>
 
-                                        <h2>IRBNet Administrator / Coordinator Forum </h2>
-                                        <p>The <a href="http://www.irbnetresources.org/forum">IRBNet Forum</a> is available to IRBNet administrators and coordinators to share best practices, tips and frequently asked questions.  We encourage IRBNet committee administrators and coordinators to subscribe. Access requires IRBNet approval.</p>
-
-                                        <br />
-
                                         <h2>Other Resources</h2>
                                         <p><a href="training.html">Researcher Resources</a></p>
                                         <p><a href="member-training.html">Committee Member Resources</a></p>
